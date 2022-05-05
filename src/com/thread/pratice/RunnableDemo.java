@@ -1,22 +1,21 @@
 package com.thread.pratice;
 
 public class RunnableDemo {
-	 
-	   public static void main(String[] args)
-	    {
-	        System.out.println("Main thread is- "
-	                        + Thread.currentThread().getName());
-	        Thread t1 = new Thread(new RunnableImpl());
-	        t1.start();
-	    }
-	  
-	  
+
+	public static void main(String[] args)
+	{
+		System.out.println("Main thread is- "
+						+ Thread.currentThread().getName());
+		Thread t1 = new Thread(new RunnableDemo().new RunnableImpl());
+		t1.start();
 	}
- class RunnableImpl implements Runnable {
-	  
-    public void run()
-    {
-        System.out.println(Thread.currentThread().getName()
-                         + ", executing run() method!");
-    }
+
+	private class RunnableImpl implements Runnable {
+
+		public void run()
+		{
+			System.out.println(Thread.currentThread().getName()
+							+ ", executing run() method!");
+		}
+	}
 }
