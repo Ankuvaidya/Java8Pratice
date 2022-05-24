@@ -1,7 +1,5 @@
 package StreamsPratice;
 
-import java.util.Collections;
-
 public class MapPratice {
 
 	public static void main(String[] args) {
@@ -13,22 +11,19 @@ public class MapPratice {
 		int i = 0;
 		int temp = 0;
 
-		while (i < l/2) {
+		while (i < l / 2) {
 			temp = arr[i];
 			arr[i] = arr[l - i - 1];
 			arr[l - i - 1] = temp;
 			i++;
 		}
-		
-		
 
-		for (int j = 0; j <l; j++) {
+		for (int j = 0; j < l; j++) {
 			System.out.println(arr[j]);
 		}
-		String  s="ankita";
-		 s= "ankita vaidya";
-		 System.out.println(s);
-
+		String s = "ankita";
+		s = "ankita vaidya";
+		System.out.println(s);
 
 	}
 
